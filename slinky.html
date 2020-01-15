@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Slinky</title>
+		
+		<link rel="stylesheet" href="../assets/css/reset.css">
+		
+		<style>
+			html, body {width:100%;min-height:100%;}
+			body {
+				background:#000;
+				display:flex;
+				flex-direction:column;
+			}
+			.slinky {height:500px;}
+			.slinky div {
+				width:300px;height:400px;
+				position:absolute;
+				left:40%;
+				
+				border-radius:50%;
+				border-bottom-width:10px;
+				border-bottom-style:solid;
+				border-bottom-color:white;
+			}
+			
+			.slinky1 div {
+				top:100px;
+				animation: roll 15s infinite ease, color 15s infinite;
+			}
+			
+			.slinky1 div:nth-child(1){animation-delay:6.5s;}
+			.slinky1 div:nth-child(2){animation-delay:6s;}
+			.slinky1 div:nth-child(3){animation-delay:5.5s;}
+			.slinky1 div:nth-child(4){animation-delay:5s;}
+			.slinky1 div:nth-child(5){animation-delay:4.5s;}
+			.slinky1 div:nth-child(6){animation-delay:4s;}
+			.slinky1 div:nth-child(7){animation-delay:3.5s;}
+			.slinky1 div:nth-child(8){animation-delay:3s;}
+			.slinky1 div:nth-child(9){animation-delay:2.5s;}
+			.slinky1 div:nth-child(10){animation-delay:2s;}
+			.slinky1 div:nth-child(11){animation-delay:1.5s;}
+			.slinky1 div:nth-child(12){animation-delay:1s;}
+			.slinky1 div:nth-child(13){animation-delay:.5s;}
+			.slinky1 div:nth-child(14){animation-delay:0;}
+			
+			@keyframes roll {
+				0% {transform:rotate(0deg);}
+				100% {transform:rotate(360deg);}
+			}
+			@keyframes color {
+				0% {border-bottom-color: #fff;}
+				10% {border-bottom-color: #8845ae;}
+				20% {border-bottom-color: #341cd0;}
+				30% {border-bottom-color: #4dd8ec;}
+				40% {border-bottom-color: #167a21;}
+				50% {border-bottom-color: #e7f40c;}
+				60% {border-bottom-color: #e78c19;}
+				70% {border-bottom-color: #f23708;}
+				80% {border-bottom-color: #d87166;}
+				90% {border-bottom-color: #d8a2c8;}
+				100% {border-bottom-color: #fff;}
+			}
+			
+			.slinky2 div {
+				top:600px;
+				animation: roll2 7.5s infinite linear, color 7.5s infinite;
+			}
+			.slinky2 div:nth-child(1){animation-delay:-7s;}
+			.slinky2 div:nth-child(2){animation-delay:-6.5s;}
+			.slinky2 div:nth-child(3){animation-delay:-6s;}
+			.slinky2 div:nth-child(4){animation-delay:-5.5s;}
+			.slinky2 div:nth-child(5){animation-delay:-5s;}
+			.slinky2 div:nth-child(6){animation-delay:-4.5s;}
+			.slinky2 div:nth-child(7){animation-delay:-4s;}
+			.slinky2 div:nth-child(8){animation-delay:-3.5s;}
+			.slinky2 div:nth-child(9){animation-delay:-3s;}
+			.slinky2 div:nth-child(10){animation-delay:-2.5s;}
+			.slinky2 div:nth-child(11){animation-delay:-2s;}
+			.slinky2 div:nth-child(12){animation-delay:-1.5s;}
+			.slinky2 div:nth-child(13){animation-delay:-1s;}
+			.slinky2 div:nth-child(14){animation-delay:-.5s;}
+			.slinky2 div:nth-child(15){animation-delay:0;}
+			
+			@keyframes roll2 {
+				0% {transform:rotate(0deg);}
+				100% {transform:rotate(360deg);}
+			}
+			
+			.slinky3 div {
+				top:1100px;
+			}
+			.slinky3 div:nth-child(1){animation:roll2 7.5s infinite linear -7s, color 3s infinite -3.5s;}
+			.slinky3 div:nth-child(2){animation:roll2 7.5s infinite linear -6.5s, color 3s infinite -3.25s;}
+			.slinky3 div:nth-child(3){animation:roll2 7.5s infinite linear -6s, color 3s infinite -3s;}
+			.slinky3 div:nth-child(4){animation:roll2 7.5s infinite linear -5.5s, color 3s infinite -2.75s;}
+			.slinky3 div:nth-child(5){animation:roll2 7.5s infinite linear -5s, color 3s infinite -2.5s;}
+			.slinky3 div:nth-child(6){animation:roll2 7.5s infinite linear -4.5s, color 3s infinite -2.25s;}
+			.slinky3 div:nth-child(7){animation:roll2 7.5s infinite linear -4s, color 3s infinite -2s;}
+			.slinky3 div:nth-child(8){animation:roll2 7.5s infinite linear -3.5s, color 3s infinite -1.75s;}
+			.slinky3 div:nth-child(9){animation:roll2 7.5s infinite linear -3s, color 3s infinite -1.5s;}
+			.slinky3 div:nth-child(10){animation:roll2 7.5s infinite linear -2.5s, color 3s infinite -1.25s;}
+			.slinky3 div:nth-child(11){animation:roll2 7.5s infinite linear -2s, color 3s infinite -1s;}
+			.slinky3 div:nth-child(12){animation:roll2 7.5s infinite linear -1.5s, color 3s infinite -.75s;}
+			.slinky3 div:nth-child(13){animation:roll2 7.5s infinite linear -1s, color 3s infinite -.5s;}
+			.slinky3 div:nth-child(14){animation:roll2 7.5s infinite linear -.5s, color 3s infinite -.25s;}
+			.slinky3 div:nth-child(15){animation:roll2 7.5s infinite linear 0, color 3s infinite 0;}
+			
+		</style>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../assets/js/prefixfree.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="slinky slinky1">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="slinky slinky2">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="slinky slinky3">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>

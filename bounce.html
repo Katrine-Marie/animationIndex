@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bounce</title>
+		
+		<link rel="stylesheet" href="assets/css/reset.css">
+		
+		<style>
+			html {font-size:150%;}
+			body {width:100%;height:100vh;display:flex;align-items:center;justify-content:center;}
+			
+			.shape{
+				animation:bounce 6s infinite, opacity 6s infinite;
+				/*animation-timing-function:cubic-bezier(.51, .01, .79, .02);*/
+				border-radius:50%;
+				height:100px;
+				width:100px;
+				background:red;
+				}
+				
+				@keyframes opacity{
+					0%{opacity:1;}
+					80%{opacity:1;}
+					90%,100%{opacity:0;}
+				}
+				
+				@keyframes bounce{
+					0%{transform:translateY(-8em) scaleY(1.2) scaleX(1);
+					animation-timing-function:ease-in;}
+					15%{transform:translateY(8em) scaleX(1.2) scaleY(1);
+					animation-timing-function:ease-out;}
+					25%{transform:translateY(-4em) scaleY(1.2) scaleX(1);
+					animation-timing-function:ease-in;}
+					32.5%{transform:translateY(8em) scaleX(1.2) scaleY(1);
+					animation-timing-function:ease-out;}
+					40%{transform:translateY(0em) scaleY(1.2) scaleX(1);
+					animation-timing-function:ease-in;}
+					45%{transform:translateY(8em) scaleX(1.2) scaleY(1);
+					animation-timing-function:ease-out;}
+					50%{transform:translateY(3em) scaleY(1.1) scaleX(1);
+					animation-timing-function:ease-in;}
+					56%{transform:translateY(8em) scaleX(1.1) scaleY(1);
+					animation-timing-function:ease-out;}
+					60%{transform:translateY(6em) scaleY(1.1) scaleX(1);
+					animation-timing-function:ease-in;}
+					64%{transform:translateY(8em) scaleX(1.1) scaleY(1);
+					animation-timing-function:ease-out;}
+					66%{transform:translateY(7.5em) scaleY(1.1) scaleX(1);
+					animation-timing-function:ease-in;}
+					70%,100%{transform:translateY(8em) scaleX(1) scaleY(1);}
+				}
+			
+		</style>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../../assets/js/prefixfree.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="shape">
+			
+		</div>
+	</body>
+</html>

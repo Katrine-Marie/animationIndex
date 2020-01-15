@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	<title>Animation Index</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index-style.css">
+</head>
+<body>
+	<svg class="hidden" style="width:0;height:0;">
+		<defs>
+			<filter id="dropshadow" x="-10%" y="-10%" width="120%" height="120%">
+					<feColorMatrix in="SourceAlpha" type="matrix"
+						values="-1 0 0 0 1, 0 -1 0 0 1, 0 0 -1 0 1, 0 0 0 1 0"
+						result="matrix"/>
+					<feGaussianBlur in="matrix" stdDeviation="5" result="blur"/>
+					<feComposite in="SourceGraphic" in2="blur" operator="over"/>
+				</filter>
+		</defs>
+	</svg>
+	<div class="screen" id="fjordscape">
+		<div class="wrapper">
+			<a data-scroll href="#honeycomb" id="link">
+				<h1>
+					Animation Index
+					<span>Click to continue</span>
+				</h1>
+				<svg class="arrow" id="bounce" width="100" height="100">
+					<polyline style="fill:none;stroke:#fff;stroke-width:2px;" points="0,0 50,50 100,0"></polyline>
+				</svg>
+			</a>
+		</div>
+	</div>
+
+	<div class="screen" id="honeycomb">
+		<div class="wrapper">
+			<div class="row">
+				<a href="3d-cube.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon1" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="145" y="260" fill="#fff">3D Cube</text>
+						</g>
+					</svg>
+				</a>
+				<a href="3d-pyramid.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon2" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="115" y="260" fill="#fff">3D Pyramid</text>
+						</g>
+					</svg>
+				</a>
+				<a href="suncell-lamp.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon3" class="hex-path">
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="80" y="260" fill="#fff">Sun Cell Lamp</text>
+						</g>
+					</svg>
+				</a>
+				<a href="eclipse.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon4" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="150" y="260" fill="#fff">Eclipse</text>
+						</g>
+					</svg>
+				</a>
+			</div>
+			<div class="row">
+				<a href="3d-lightbeams.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon5" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="70" y="260" fill="#fff">3D Lightbeams</text>
+						</g>
+					</svg>
+				</a>
+				<a href="goo-rand.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon6" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="130" y="260" fill="#fff">Goo Rand</text>
+						</g>
+					</svg>
+				</a>
+				<a href="slinky.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon7" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="180" y="260" fill="#fff">Slinky</text>
+						</g>
+					</svg>
+				</a>
+			</div>
+			<div class="row">
+				<a href="waves.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon8" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="180" y="260" fill="#fff">Waves</text>
+						</g>
+					</svg>
+				</a>
+				<a href="lollipop.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon9" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="160" y="260" fill="#fff">Lollipop</text>
+						</g>
+					</svg>
+				</a>
+				<a href="wave-animation.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon10" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="100" y="260" fill="#fff">Wavy Screen</text>
+						</g>
+					</svg>
+				</a>
+				<a href="spiral2.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon11" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="160" y="260" fill="#fff">Spiral</text>
+						</g>
+					</svg>
+				</a>
+			</div>
+			<div class="row">
+				<a href="loader.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon12" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="120" y="260" fill="#fff">SVG Loader</text>
+						</g>
+					</svg>
+				</a>
+				<a href="attempt5.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon13" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="60" y="260" fill="#fff">Spinning Circles</text>
+						</g>
+					</svg>
+				</a>
+				<a href="css-clippath2.html" target="_blank">
+					<svg filter="url(#dropshadow)" class="hexagon" x="0" y="0" viewBox="0 0 500 500">
+						<g id="hexagon14" class="hex-path" >
+							<path fill="#333"
+							d="M345.117,50.026c11-0.015,24.511,7.762,30.022,17.281l95.602,165.08
+							c5.512,9.519,5.533,25.107,0.046,34.641L375.623,432.36c-5.487,9.534-18.977,17.346-29.977,17.36l-190.764,0.253
+							c-11,0.015-24.51-7.762-30.023-17.281L29.259,267.613c-5.513-9.52-5.533-25.108-0.046-34.642L124.376,67.64
+							c5.487-9.534,18.977-17.346,29.977-17.36L345.117,50.026z"/>
+							<text x="57" y="260" fill="#fff">Clippath Morph</text>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+	<script src="../assets/js/smooth-scroll.min.js"></script>
+	<script>
+		// Scroll animation
+		smoothScroll.init();
+
+		// Store the arrow and the link for later use
+		var arrow = document.querySelector("#bounce");
+		var target = document.querySelector("#link");
+
+		// Arrow animation
+		var arrow_tl = new TimelineMax({
+			yoyo:true,
+			repeat:-1
+		});
+
+		arrow_tl.to("#bounce", .6, {
+			ease: Power3.easeOut,
+			y:40
+		});
+
+		// Hexagon animate init
+		TweenMax.set(".hex-path", {
+			css: {
+				opacity: .98,
+				transformOrigin: "50% 50%"
+			}
+		});
+
+		target.addEventListener("click", hexagonAnimateIn, false);
+
+		function hexagonAnimateIn(){
+			var tl = new TimelineMax({
+				delay:.8
+			});
+
+			tl.staggerFrom(".hex-path", 1, {css:{scale:.75, rotation:20, opacity:0}, ease:Elastic.easeOut}, .2);
+		}
+
+		// Hexagon hover effect
+		var hexAmount = document.querySelectorAll('.hex-path').length;
+		for(var i = 1; i <= hexAmount; i++){
+
+			// find the relevant hexagon
+			var hex = document.getElementById('hexagon' + i + '');
+
+			function moveOver(){
+				return TweenMax.to(this, .5, {css:{
+					scale:1.1, rotation:-4, opacity:1 }, ease:Elastic.easeOut
+				} );
+			}
+			function moveOff(){
+				TweenMax.to(this, .2, {css:{
+					scale:1, rotation:0, opacity:.98 }, ease:Power0.easeNone
+				} );
+			}
+
+			// Hook the moveOver and moveOff functions to hover and touch events
+			hex.addEventListener("mouseenter", moveOver); hex.addEventListener("touchstart", moveOver);
+			hex.addEventListener("mouseleave", moveOff); hex.addEventListener("touchend", moveOff);
+
+		} // end of for loop
+
+	</script>
+</body>
+</html>

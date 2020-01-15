@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Waves</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			.waves, .wave {display:flex;}
+			.waves {
+				margin: 20px auto;
+				max-width:1000px;
+				height:600px;
+				border:10px solid #333;
+				background-color:darkblue;
+				flex-direction:column;
+				position:relative;
+				overflow:hidden;
+			}	
+			.wave {
+				width:100%;
+				flex-direction:row;
+				position:absolute;
+			}
+			.wave div {
+				width:10%;
+				height:170px;
+				border-radius: 0 0 60px 60px;
+				margin-left:-0.3%;
+			}
+			.wave div:nth-child(11) {position:absolute;left:97%;}
+			.wave div:nth-child(12) {position:absolute;left:106.8%;}
+			
+			.wave1 div {
+				height:200px;background:lightblue;}
+			.wave2 div {
+				background:#95b2ce;}
+			.wave3 div {
+				background:#3750a9;}
+			.wave4 div {
+				background:#0411d2;}
+			.wave {animation: waves 5s infinite ease alternate;}
+			.wave1 {
+				z-index:10;}
+			.wave2 {
+				top:130px;
+				z-index:9;
+				animation-delay:2s;}
+			.wave3 {
+				top:230px;
+				z-index:8;
+				animation-delay:4s;}
+			.wave4 {
+				top:330px;
+				z-index:7;
+				animation-delay:3s;}
+			
+  			@keyframes waves {
+  				to {transform: translateX(-10%);}
+  			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="waves">
+				<div class="wave wave1">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="wave wave2">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="wave wave3">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="wave wave4">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+		</div> <!-- Waves end -->
+	</body>
+</html>

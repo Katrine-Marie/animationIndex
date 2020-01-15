@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Goo Effect</title>
+		
+		<style>
+			body {
+			    background-image:url(../assets/img/bg/diamonds.png);
+			}
+			svg {
+				width:0;
+				height:0;
+			}
+			
+			.container {
+				margin:100px auto;
+				display:flex;
+				justify-content:space-around;
+				align-items:center;
+			}
+			.goo1, .goo2, .goo3 {-webkit-filter:url(#goo);}
+			.goo4, .goo5, .goo6 {-webkit-filter:url(#goo-no-comp);}
+			
+			.container div {
+				background:#fffff0;
+				width:25px;
+				height:25px;
+				border-radius:50%;
+			}
+			
+			.goo1, .goo4, .goo5 {
+				width:700px;
+				height:300px;
+				position:relative;
+			}
+			.goo1 > div, .goo4 > div, .goo5 > div {
+			    width:15px;
+			    height:15px;
+				position:absolute;
+				transform-origin:-50% -50%;
+				animation:circle 2.5s infinite cubic-bezier(.57,0,.52,1);
+			}
+			.goo4 > div, .goo5 > div {
+				width:30px;
+				height:30px;
+			}
+			
+			.goo1 > div:nth-child(1){animation-delay:.25s;}
+			.goo1 > div:nth-child(2){animation-delay:.5s;}
+			.goo1 > div:nth-child(3){animation-delay:.75s;}
+			.goo1 > div:nth-child(4){animation-delay:1s;}
+			.goo1 > div:nth-child(5){animation-delay:1.25s}
+			
+			.goo4 > div:nth-child(1){
+				animation:circle2 3.5s infinite linear;
+				background:limegreen;
+			}
+			.goo4 > div:nth-child(2){
+				animation:circle2 3s infinite linear;
+				background:yellow;
+			}
+			.goo4 > div:nth-child(3){
+				animation:circle2 2.5s infinite linear;
+				background:salmon;
+			}
+			.goo4 > div:nth-child(4){
+				animation:circle2 2s infinite linear;
+				background:goldenrod;
+			}
+			.goo4 > div:nth-child(5){
+				animation:circle2 1.5s infinite linear;
+				background:mistyrose;
+			}
+			
+			.goo5 > div:nth-child(1){
+				animation:circle2 3s infinite linear;
+				background:limegreen;
+			}
+			.goo5 > div:nth-child(2){
+				animation:circle2 3s infinite linear;
+				animation-delay:-.5s;
+				background:yellow;
+			}
+			.goo5 > div:nth-child(3){
+				animation:circle2 3s infinite linear;
+				animation-delay:-1s;
+				background:goldenrod;
+			}
+			.goo5 > div:nth-child(4){
+				animation:circle2 3s infinite linear;
+				animation-delay:-1.5s;
+				background:salmon;
+			}
+			.goo5 > div:nth-child(5){
+				animation:circle2 3s infinite linear;
+				animation-delay:-2s;
+				background:violet;
+			}
+			.goo5 > div:nth-child(6){
+				animation:circle2 3s infinite linear;
+				animation-delay:-2.5s;
+				background:skyblue;
+			}
+			.goo5 > div:nth-child(7){
+				animation:circle2 1.25s infinite linear alternate;
+				background:#fff;
+			}
+			
+			
+			.goo2 > div {
+				transform:translateX(0);
+				animation:sideways 2.5s infinite ease;
+			}
+			.goo2 > div:nth-child(1){animation-delay:.25s;}
+			.goo2 > div:nth-child(2){animation-delay:.5s;}
+			.goo2 > div:nth-child(3){animation-delay:.75s;}
+			.goo2 > div:nth-child(4){animation-delay:1s;}
+			.goo2 > div:nth-child(5){animation-delay:1.25s}
+			
+			.goo2, .goo3 {
+				width:230px;
+				height:100px;
+			}
+			.goo3 > div {
+				transform:translateX(0);
+				animation:sideways 2.5s infinite cubic-bezier(1,.09,0,.62);
+			}
+			.goo3 > div:nth-child(1){animation-delay:.25s;}
+			.goo3 > div:nth-child(2){animation-delay:.5s;}
+			.goo3 > div:nth-child(3){animation-delay:.75s;}
+			.goo3 > div:nth-child(4){animation-delay:1s;}
+			.goo3 > div:nth-child(5){animation-delay:1.25s}
+			
+			.goo6 {
+				width:200px;
+				height:100px;
+			}
+			
+			.goo6 > div {
+				transform:scale(1);
+				animation:scale 1.25s infinite linear alternate;
+			}
+			
+			.goo6 > div:nth-child(2){animation-delay:.125s;background:mistyrose;}
+			.goo6 > div:nth-child(3){animation-delay:.25s;background:pink;}
+			.goo6 > div:nth-child(4){animation-delay:.375s;background:violet;}
+			.goo6 > div:nth-child(5){animation-delay:.5s;background:orchid;}
+			
+			@keyframes scale {
+				100% {transform:scale(1.7);}
+			}
+			
+			@keyframes circle {
+			    50% {width:25px; height:25px;}
+				100% {transform:rotate(360deg);}
+			}
+			@keyframes circle2 {
+				100% {transform:rotate(360deg);}
+			}
+			@keyframes sideways {
+				33% {transform:translateX(50px);}
+				66% {transform:translateX(-50px);}
+			}
+		</style>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../assets/js/prefixfree.min.js"></script>
+	</head>
+	<body>
+		
+		<svg>
+  			<defs>
+   				<filter id="goo">
+   					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+   					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+					<feComposite in="SourceGraphic" in2="goo" />
+  				</filter>
+				<filter id="goo-no-comp">
+			      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			    </filter>
+  			</defs>
+		</svg>
+		
+		
+		<div class="container goo1">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="container goo4">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="container goo5">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="container goo6">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="container goo2">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="container goo3">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>

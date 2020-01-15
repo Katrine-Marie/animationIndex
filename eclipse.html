@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Eclipse</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			
+			* {transition: all .5s;}
+			
+			html {
+				width:100%;
+				height:100%;
+				overflow:hidden;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				position:relative;
+				background:#b3c7dd;
+				animation: sky 6s infinite linear;
+			}
+			body {
+				border-radius:50%;
+				z-index:10;
+				background:#fff;
+				box-shadow:1px 1px 1px #fff;
+				animation: glow 6s infinite ease-in-out;
+			} /* html:before doesn't work in IE */
+			html:after {
+				content:"";
+				border-radius:50%;
+				position:absolute;
+				z-index:11;
+				top:50%;
+				transform:translateY(-50%);
+				animation: eclipse 6s infinite ease-in-out;
+			}
+			body, html:after {width:200px; height:200px;}
+			
+			@keyframes sky {
+				30% {background:#b3c7dd;}
+				50% {background:#0c0224;}
+				70% {background:#b3c7dd;}
+			}
+			
+			@keyframes glow {
+				0% {box-shadow:1px 1px 1px #fff;}
+				30% {box-shadow:1px 1px 5px #fff;}
+				50% {box-shadow:1px 1px 200px #e1e777;background:#e1e777;}
+				70% {box-shadow:1px 1px 5px #fff;}
+				100% {box-shadow:1px 1px 1px #fff;}
+			}
+			
+			@keyframes eclipse {
+				0% {
+					right:-35%;
+					background:#fff;
+					transform:scale(2) translateY(-50%);
+				}
+				50% {transform:scale(1) translateY(-50%);background:#0c0224;}
+				100% {
+					right:120%;
+					background:#fff;
+					transform:scale(2) translateY(-50%);
+				}
+			}
+			
+			@media only screen and (max-width:960px){
+				body, html:after {height:150px;width:150px;}
+			}
+			@media only screen and (max-width:480px){
+				body, html:after {height:100px;width:100px;}
+			}
+			
+		</style>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+	</head>
+	
+	<body>
+		
+	</body>
+</html>

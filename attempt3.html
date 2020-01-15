@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Attempt 3</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			.circle {
+   				background-color: transparent;
+   				border: 5px solid orange;
+   				opacity: .9;
+   				border-right: 5px solid transparent;
+   				border-left: 5px solid transparent;
+   				border-radius: 50%;
+   				box-shadow: 0 0 35px yellow;
+   				width: 100px;
+   				height: 100px;
+   				margin: 50px auto;
+   				-webkit-animation: spinPulse 0.8s infinite linear;
+				-moz-animation: spinPulse 0.8s infinite linear;
+				animation: spinPulse 0.8s infinite linear;
+			}
+			
+			@-webkit-keyframes spinPulse {
+   				0% {
+   				-webkit-transform: rotate(180deg);
+   				opacity: 0;
+  				box-shadow: 0 0 1px yellow;}
+  				50% {
+  				-webkit-transform: rotate(140deg);
+  				opacity: 1;}
+			}
+			@-moz-keyframes spinPulse {
+   				0% {
+   				-moz-transform: rotate(180deg);
+   				opacity: 0;
+  				box-shadow: 0 0 1px yellow;}
+  				50% {
+  				-moz-transform: rotate(140deg);
+  				opacity: 1;}
+			}
+			@keyframes spinPulse {
+   				0% {
+   				transform: rotate(180deg);
+   				opacity: 0;
+  				box-shadow: 0 0 1px yellow;}
+  				50% {
+  				transform: rotate(140deg);
+  				opacity: 1;}
+			}
+			
+			.bar-wrapper {
+				text-align:center;
+			}
+			
+			.barlittle {
+  				background-color: yellow;
+   				background-image: -webkit-linear-gradient(45deg, orange 25%, yellow);
+				background-image: -moz-linear-gradient(45deg, orange 25%, yellow);
+				background-image: linear-gradient(45deg, orange 25%, yellow);
+   				border-left: 1px solid #ddd;
+   				border-top: 1px solid #ddd;
+   				border-right: 1px solid #aaa;
+   				border-bottom: 1px solid #aaa;
+   				width: 10px;
+   				height: 10px;
+   				display:inline-block;
+   				margin-left:5px;
+   				opacity: 0.1;
+   				-webkit-transform: scale(0.7);
+   				-webkit-animation: move 1s infinite linear;
+				-moz-transform: scale(0.7);
+   				-moz-animation: move 1s infinite linear;
+				transform: scale(0.7);
+   				animation: move 1s infinite linear;
+			}
+			
+			.block_1 {
+   				-webkit-animation-delay: .2s;
+				-moz-animation-delay: .2s;
+				animation-delay: .2s;
+			}
+			
+			.block_2 {
+  				-webkit-animation-delay: .3s;
+				-moz-animation-delay: .3s;
+				animation-delay: .3s;
+			}
+			
+			.block_3 {
+  				-webkit-animation-delay: .4s;
+				-moz-animation-delay: .4s;
+				animation-delay: .4s;
+			}
+			
+			.block_4 {
+   				-webkit-animation-delay: .5s;
+				-moz-animation-delay: .5s;
+				animation-delay: .5s;
+			}
+			
+			.block_5 {
+   				-webkit-animation-delay: .6s;
+				-moz-animation-delay: .6s;
+				animation-delay: .6s;
+			}
+			
+			@-webkit-keyframes move {
+   				0% {
+   				-webkit-transform: scale(1.2);
+   				  opacity: 1;
+  				}
+				100% {
+   				-webkit-transform: scale(0.7);
+  				opacity: 0.1;
+  				};
+			}
+			@-moz-keyframes move {
+   				0% {
+   				-moz-transform: scale(1.2);
+   				  opacity: 1;
+  				}
+				100% {
+   				-moz-transform: scale(0.7);
+  				opacity: 0.1;
+  				};
+			}
+			@keyframes move {
+   				0% {
+   				transform: scale(1.2);
+   				  opacity: 1;
+  				}
+				100% {
+   				transform: scale(0.7);
+  				opacity: 0.1;
+  				};
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="circle"></div>
+		
+		<div class="bar-wrapper">
+			<div class="barlittle block_1"></div>
+			<div class="barlittle block_2"></div>
+			<div class="barlittle block_3"></div>
+			<div class="barlittle block_4"></div>
+			<div class="barlittle block_5"></div>
+		</div>
+	</body>
+</html>

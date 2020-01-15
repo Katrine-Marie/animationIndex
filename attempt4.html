@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Attempt 4</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			
+			.gradient {
+				width:700px;
+				height:700px;
+				border-radius:50%;
+				position:relative;
+				background-image: -webkit-radial-gradient(center center, circle cover, green, limegreen, transparent, transparent);
+				background-image: -moz-radial-gradient(center center, circle cover, green, limegreen, transparent, transparent);
+				background-image: radial-gradient(center center, circle cover, green, limegreen, transparent, transparent);
+			}
+			.gradient2 {
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				background-image: -webkit-radial-gradient(center center, circle cover, yellow, oldlace, transparent, transparent);
+				background-image: -moz-radial-gradient(center center, circle cover, yellow, oldlace, transparent, transparent);
+				background-image: radial-gradient(center center, circle cover, yellow, oldlace, transparent, transparent);
+				
+				position: absolute;
+   				left: 250px;
+   				top: 250px;
+				-webkit-animation: rotate 4s linear infinite;
+				-moz-animation: rotate 4s linear infinite;
+				animation: rotate 4s linear infinite;
+			}
+			
+			@-webkit-keyframes rotate {
+   				from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  				to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+			}
+			@-moz-keyframes rotate {
+   				from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  				to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+			}
+			@keyframes rotate {
+  				from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  				to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="gradient">
+			<div class="gradient2">
+				
+			</div>
+		</div>
+	</body>
+</html>

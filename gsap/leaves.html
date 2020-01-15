@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Greensock Leaves</title>
+	
+	<style>
+		html, body {
+			margin:0;
+			padding:0;
+		}
+		body {
+			overflow:hidden;
+			height:100vh;
+			background:linear-gradient(#daf07f, olivedrab);
+		}
+		.wrapper {
+			width:960px;
+			margin:0 auto;
+			
+			display:flex;
+			justify-content:space-between;
+		}
+		.wrapper img {
+			margin-top:-280px;
+		}
+		
+		.wrapper img:nth-child(2){order:3;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<img src="img/leaf1.png">
+		<img src="img/leaf2.png">
+		<img src="img/leaf3.png">
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+	<script>
+		window.onload = function(){
+			
+			var tl1 = new TimelineMax({repeat:-1});
+			var tl2 = new TimelineMax({repeat:-1, yoyo:true});
+			
+			tl1.staggerTo(".wrapper img", 1.8, {
+				ease:Power1.easeOut,
+				y: 1000
+			}, -.8);
+			
+			tl2.staggerTo(".wrapper img", 1, { css:{
+				rotationX:'180deg',
+				rotationY:'50deg'
+			}, ease:Power1.easeOut});
+			
+		}
+	</script>
+</body>
+</html>

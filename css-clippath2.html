@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Clippath</title>
+
+	<link rel="stylesheet" href="../standard/css/reset.css">
+	<style>
+		body {
+			background:#000;
+			padding:20px;
+			
+			display:flex;
+			justify-content:center;
+			flex-wrap:wrap;
+		}
+		body > * {
+			max-width:300px;
+			margin:20px;
+		}
+		img {width:100%;}
+		figure {position:relative;}
+		figcaption {position:absolute;color:#fff;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);}
+		
+		.octagon-bevel {
+			-webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+			clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+			animation: octagon-bevel 2s infinite;
+		}
+		@keyframes octagon-bevel {
+			50% {
+				-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+				clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+			}
+		}
+		
+		.rabbet-square {
+			-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+			clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+			animation: rabbet-square 2s infinite;
+		}
+		@keyframes rabbet-square {
+			50% {
+				-webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+				clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+			}
+		}
+		
+		.left_arrow-right_arrow {
+			-webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+			clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+			animation: left_arrow-right_arrow 2s infinite;
+		}
+		@keyframes left_arrow-right_arrow {
+			50% {
+				-webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+				clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+			}
+		}
+		
+		.trapezoid-triangle {
+			-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+			clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+			animation: trapezoid-triangle 2s infinite;
+		}
+		@keyframes trapezoid-triangle {
+			50% {
+				-webkit-clip-path: polygon(52% 0, 52% 0, 100% 100%, 0% 100%);
+				clip-path: polygon(52% 0, 52% 0, 100% 100%, 0% 100%);
+			}
+		}
+		
+		.left_chevron-right_chevron {
+			-webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+			clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+			animation: left_chevron-right_chevron 2s infinite;
+		}
+		@keyframes left_chevron-right_chevron {
+			50% {
+				-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+				clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+			}
+		}
+		
+		.square-rhombus {
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			animation: square-rhombus 2s infinite;
+		}
+		@keyframes square-rhombus {
+			50% {
+				-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+				clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+			}
+		}
+		
+		.heptagon-message {
+			-webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+			clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+			animation: heptagon-message 2s infinite;
+		}
+		@keyframes heptagon-message {
+			50% {
+				-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+				clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+			}
+		}
+		
+		.left_point-right_point {
+			-webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+			clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+			animation: left_point-right_point 2s infinite;
+		}
+		@keyframes left_point-right_point {
+			50% {
+				-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+				clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+			}
+		}
+		
+		.octagon-rhombus {
+			-webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+			clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+			animation: octagon-rhombus 2s infinite;
+		}
+		@keyframes octagon-rhombus {
+			50% {
+				-webkit-clip-path: polygon(51% 0, 51% 0, 100% 52%, 100% 52%, 50% 100%, 50% 100%, 0 51%, 0 51%);
+				clip-path: polygon(51% 0, 51% 0, 100% 52%, 100% 52%, 50% 100%, 50% 100%, 0 51%, 0 51%);
+			}
+		}
+		
+		.rhombus-disappear {
+			-webkit-clip-path: polygon(50% 0, 25% 25%, 1% 50%, 25% 75%, 50% 100%, 75% 75%, 100% 50%, 75% 25%);
+			clip-path: polygon(50% 0, 25% 25%, 1% 50%, 25% 75%, 50% 100%, 75% 75%, 100% 50%, 75% 25%);
+			animation: rhombus-disappear 2s infinite;
+		}
+		@keyframes rhombus-disappear {
+			50% {
+				-webkit-clip-path: polygon(50% 0, 50% 50%, 0% 50%, 50% 50%, 50% 100%, 50% 50%, 100% 50%, 50% 50%);
+				clip-path: polygon(50% 0, 50% 50%, 0% 50%, 50% 50%, 50% 100%, 50% 50%, 100% 50%, 50% 50%);
+			}
+		}
+		
+		.rabbet-octagon {
+			-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+			clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+			animation: rabbet-octagon 2s infinite;
+		}
+		@keyframes rabbet-octagon {
+			50% {
+				-webkit-clip-path: polygon(0 50%, 15% 15%, 50% 0, 50% 0, 85% 15%, 100% 50%, 100% 50%, 85% 85%, 50% 100%, 50% 100%, 15% 85%, 0 50%);
+clip-path: polygon(0 50%, 15% 15%, 50% 0, 50% 0, 85% 15%, 100% 50%, 100% 50%, 85% 85%, 50% 100%, 50% 100%, 15% 85%, 0 50%);
+			}
+		}
+		
+		.rhombus-star {
+			-webkit-clip-path: polygon(50% 0, 39% 11%, 25% 25%, 13% 37%, 0 50%, 13% 63%, 25% 75%, 38% 88%, 50% 100%, 63% 88%, 75% 75%, 88% 63%, 100% 50%, 88% 38%, 75% 25%, 61% 11%);
+			clip-path: polygon(50% 0, 39% 11%, 25% 25%, 13% 37%, 0 50%, 13% 63%, 25% 75%, 38% 88%, 50% 100%, 63% 88%, 75% 75%, 88% 63%, 100% 50%, 88% 38%, 75% 25%, 61% 11%);
+			animation: rhombus-star 2s infinite;
+		}
+		@keyframes rhombus-star {
+			50% { -webkit-clip-path: polygon(50% 0, 39% 25%, 10% 10%, 25% 38%, 0 50%, 25% 62%, 10% 90%, 38% 75%, 50% 100%, 59% 75%, 90% 90%, 75% 62%, 100% 50%, 75% 36%, 90% 10%, 61% 25%);
+			clip-path: polygon(50% 0, 39% 25%, 10% 10%, 25% 38%, 0 50%, 25% 62%, 10% 90%, 38% 75%, 50% 100%, 59% 75%, 90% 90%, 75% 62%, 100% 50%, 75% 36%, 90% 10%, 61% 25%);
+			}
+		}
+		
+		.square-message {
+			-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 100%, 75% 100%, 50% 100%, 0 100%);
+			clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 100%, 75% 100%, 50% 100%, 0 100%);
+			animation: square-message 2s infinite;
+		}
+		@keyframes square-message {
+			50% {
+				-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+				clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+			}
+		}
+		
+		
+		.frame {
+			-webkit-clip-path: polygon(0 100%, 0% 100%, 25% 75%, 25% 75%, 25% 75%, 25% 75%, 25% 75%, 0 100%, 0 100%, 0 100%);
+			clip-path: polygon(0 100%, 0% 100%, 25% 75%, 25% 75%, 25% 75%, 25% 75%, 25% 75%, 0 100%, 0 100%, 0 100%);
+			animation: frame 2s infinite linear alternate;
+		}
+		@keyframes frame {
+			20% {
+				-webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 25% 25%, 25% 25%, 25% 25%, 0 0, 0 0, 0 0);
+				clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 25% 25%, 25% 25%, 25% 25%, 0 0, 0 0, 0 0);
+			}
+			40% {
+				-webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 25%, 75% 25%, 100% 0, 100% 0, 100% 0%);
+				clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 25%, 75% 25%, 100% 0, 100% 0, 100% 0%);
+			}
+			60% {
+				-webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 75%, 75% 75%, 100% 100%, 100% 100%, 100% 0%);
+				clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 75%, 75% 75%, 100% 100%, 100% 100%, 100% 0%);
+			}
+			80% {
+				-webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 0 100%, 100% 100%, 100% 0%);
+				clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 0 100%, 100% 100%, 100% 0%);
+			}
+			100% {
+				-webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 0 100%, 100% 100%, 100% 0%);
+				clip-path: polygon(0% 0%, 0% 100%, 25% 75%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 0 100%, 100% 100%, 100% 0%);
+			}
+		}
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="../assets/js/prefixfree.min.js"></script>
+</head>
+
+<body>
+	
+	<div>
+		<img src="http://fjordstudio.dk/experiments/flower.jpg" alt="Octagon to Bevel" class="octagon-bevel">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/vildvin.jpg" alt="Rabbet to Square" class="rabbet-square">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_4400.jpg" alt="Left to Right Arrow" class="left_arrow-right_arrow">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_4400.jpg" alt="Trapezoid to Triangle" class="trapezoid-triangle">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/vildvin.jpg" alt="Left to Right Chevron" class="left_chevron-right_chevron">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_5214.jpg" alt="Square to Rhombus" class="square-rhombus">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_0874.jpg" alt="Heptagon to Message" class="heptagon-message">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_0874.jpg" alt="Left to Right Point" class="left_point-right_point">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_0449.jpg" alt="Octagon to Rhombus" class="octagon-rhombus">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/experiments/flower.jpg" alt="Rhombus Disappearance" class="rhombus-disappear">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/experiments/flower.jpg" alt="Rabbet to Octagon" class="rabbet-octagon">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/experiments/flower.jpg" alt="Rhombus to Star" class="rhombus-star">
+	</div>
+	<div>
+		<img src="http://fjordstudio.dk/assets/img/IMG_0449.jpg" alt="Square to Message" class="square-message">
+	</div>
+	<figure>
+		<img src="http://fjordstudio.dk/assets/img/IMG_0449.jpg" alt="Frame" class="frame">
+		<figcaption>Tekst</figcaption>
+	</figure>
+	
+	
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Attempt 11</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+		
+			.circle-wrapper {
+				background-color:#fff;
+				box-shadow: 0 0 100px #d81d27;
+				margin:30px auto;
+				height:500px;
+				width:500px;
+				border-radius:50%;
+				position:relative;
+			}
+			.circle {
+				background-color: #d81d27;
+				height:480px;
+				width:480px;
+				border-radius:50%;
+				border:5px solid #AD1A1C;
+				position:absolute;
+				top:5px;
+				left:5px;
+			}
+			.ellipse {
+				background:white;
+				width:450px;
+				height:300px;
+				border-radius:50%;
+				position:absolute;
+				top:19%;
+				left:4%;
+				border:5px solid #AD1A1C;
+				animation: spinner 5s linear infinite;
+			}
+			.ellipse:hover {
+				animation-play-state:paused;
+			}
+			
+			@keyframes spinner {
+    			0% {transform: rotate(360deg);}
+				100% {transform: rotate(0deg);}
+			}
+			
+			
+			
+			.heart {
+				font-size: 300px;
+				position:absolute;
+				top:100px;
+				left:50%;
+				margin-left:-100px;
+				z-index:1;
+				color:#d81d27;
+				cursor:crosshair;
+			}
+			
+			.pulse1 {
+				animation: pulse1 1s linear infinite;
+			}
+
+			@keyframes "pulse1" {
+			 0% {
+   			color: #d81d27;;
+ 			}
+ 			90% {
+   			color: rgba(255,0,0,0.0);
+			}
+			100% {
+   			color: rgba(255,0,0,1.0);
+ 			}
+			}
+		
+		</style>
+	</head>
+	
+	<body>
+		<div class="circle-wrapper">
+			<div class="circle">
+				
+			</div>
+			<div class="ellipse">
+				
+			</div>
+			<div class="heart pulse1">♥</div>
+		</div>
+
+	</body>
+</html>

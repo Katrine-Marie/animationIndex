@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Attempt 1</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			
+			.coral-shadow {
+				box-sizing:border-box;
+				border:10px solid coral;
+ 				border-top:1px solid transparent;
+ 				border-left:1px solid transparent;
+				box-shadow: 5px 5px 100px coral;
+				height:200px;
+				width:200px;
+				border-radius:50%;
+				margin:0 auto;
+				position:relative;
+				top:50px;
+				animation: spin 0.7s infinite linear;
+			}
+			.coral {
+				box-sizing:border-box;
+				border:20px solid coral;
+ 				border-top:1px solid transparent;
+ 				border-left:1px solid transparent;
+				height:200px;
+				width:200px;
+				border-radius:50%;
+				margin:0 auto;
+				position:relative;
+				top:200px;
+				animation: spin2 0.5s infinite linear;
+			}
+			.coral-shadow:hover, .coral:hover {
+				animation-play-state:paused;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+				
+   				100% {
+ 					transform: rotate(360deg);
+   				};
+			}
+			
+			@keyframes spin2 {
+				0% {
+					transform: rotate(0deg);
+				}
+				
+   				100% {
+ 					transform: rotate(-360deg);
+   				};
+			}
+
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="coral-shadow">
+			
+		</div>
+		<div class="coral">
+			
+		</div>
+
+	</body>
+</html>

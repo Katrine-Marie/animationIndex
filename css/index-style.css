@@ -1,0 +1,123 @@
+/* ========== GENERAL STYLING  ========== */
+* {box-sizing:border-box;}
+
+body {
+	color:#fff;
+	font-family:'Roboto';
+	font-weight:300;
+
+	height:100vh;
+	overflow:hidden;
+}
+h1 {
+	font-weight:100;
+	font-size:40px;
+	text-align:center;
+	text-transform:uppercase;
+}
+h1 span {
+	display:block;
+	font-size:20px;
+	margin:12px;
+}
+a {display:block;color:#fff;text-decoration:none;}
+
+/* ========== WRAPPERS ========== */
+.wrapper {
+	max-width:1140px;
+	margin:0 auto;
+
+	overflow-y:auto;
+	overflow-x:hidden;
+	height:100vh; /* Because of IE */
+}
+.screen {
+	min-height:100vh;
+}
+#fjordscape .wrapper, #fjordscape a {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+#honeycomb .wrapper {
+	overflow-y:auto;
+}
+
+/* Backgrounds */
+.screen#fjordscape {
+	background:#4a70d1;
+	background-image:url("fjordscape.svg");
+	background-size:cover;
+	margin-top:-16px;
+}
+.screen:nth-child(even){background:#4a70d1;}
+.screen:nth-child(odd){background:#1e3d84;}
+
+
+/* ========== SVG'S ========== */
+.arrow {
+	margin-top:48px;
+}
+
+.hexagon {
+	width:200px;
+	height:200px;
+}
+
+svg text {
+	font-size:56px;
+}
+
+#honeycomb .wrapper {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+#honeycomb .wrapper a {
+	display:inline-block;
+}
+#honeycomb .row > * {
+	margin:38px;
+}
+#honeycomb .row:not(:first-child){
+	margin-top:-198px;
+}
+
+@media only screen and (max-width:1130px){
+	.hexagon {
+		width:140px;
+		height:140px;
+	}
+	#honeycomb .row > * {
+		margin:28px;
+	}
+	#honeycomb .row:not(:first-child){
+		margin-top:-142px;
+	}
+	#honeycomb .row:nth-child(even){
+		margin-left:-2px;
+	}
+}
+@media only screen and (max-width:750px){
+	.hexagon {
+		width:100px;
+		height:100px;
+	}
+	#honeycomb .wrapper {
+		overflow-x:auto;
+		padding-left:140px;
+	}
+	#honeycomb .row {display:flex;}
+	#honeycomb .row > * {
+		margin:22px;
+		display:inline-block;
+	}
+	#honeycomb .row:not(:first-child){
+		margin-top:-104px;
+	}
+	#honeycomb .row:nth-child(even){
+		margin-left:-1px;
+	}
+}

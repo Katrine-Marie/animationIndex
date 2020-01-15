@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Loader</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background: #000;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.slinky {
+			position:relative;
+		}
+		.slinky div {
+			width: 200px;
+			height: 280px;
+			position: absolute;
+			top: -140px;
+			left:-100px;
+			border-radius: 50%;
+			border-bottom-width: 10px;
+			border-bottom-style: solid;
+		}
+		.slinky2 div {
+			animation: roll2 7.5s infinite linear, color 7.5s infinite;
+		}
+		.slinky2 div:nth-child(1) {
+			animation-delay: -7s;
+			border-bottom-color: #eee;
+			z-index:15;
+		}
+		.slinky2 div:nth-child(2) {
+			animation-delay: -6.5s;
+			border-bottom-color: #ddd;
+			z-index:14;
+		}
+		.slinky2 div:nth-child(3) {
+			animation-delay: -6s;
+			border-bottom-color: #ccc;
+			z-index:13;
+		}
+		.slinky2 div:nth-child(4) {
+			animation-delay: -5.5s;
+			border-bottom-color: #bbb;
+			z-index:12;
+		}
+		.slinky2 div:nth-child(5) {
+			animation-delay: -5s;
+			border-bottom-color: #aaa;
+			z-index:11;
+		}
+		.slinky2 div:nth-child(6) {
+			animation-delay: -4.5s;
+			border-bottom-color: #999;
+			z-index:10;
+		}
+		.slinky2 div:nth-child(7) {
+			animation-delay: -4s;
+			border-bottom-color: #888;
+		}
+		.slinky2 div:nth-child(8) {
+			animation-delay: -3.5s;
+			border-bottom-color: #777;
+		}
+		.slinky2 div:nth-child(9) {
+			animation-delay: -3s;
+			border-bottom-color: #666;
+		}
+		.slinky2 div:nth-child(10) {
+			animation-delay: -2.5s;
+			border-bottom-color: #555;
+		}
+		.slinky2 div:nth-child(11) {
+			animation-delay: -2s;
+			border-bottom-color: #444;
+		}
+		.slinky2 div:nth-child(12) {
+			animation-delay: -1.5s;
+			border-bottom-color: #333;
+		}
+		.slinky2 div:nth-child(13) {
+			animation-delay: -1s;
+			border-bottom-color: #222;
+		}
+		.slinky2 div:nth-child(14) {
+			animation-delay: -.5s;
+			border-bottom-color: #111;
+		}
+		.slinky2 div:nth-child(15) {
+			animation-delay: 0;
+			border-bottom-color: #000;
+		}
+
+		@keyframes roll2 {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="slinky slinky2">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+</body>
+</html>
